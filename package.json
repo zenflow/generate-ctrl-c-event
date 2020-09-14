@@ -1,0 +1,59 @@
+{
+  "name": "generate-ctrl-c-event",
+  "version": "1.0.0",
+  "description": "Send CTRL_C_EVENT to all processes that share the console of the calling process",
+  "keywords": [
+    "windows",
+    "ctrl+c",
+    "ctrl_c",
+    "ctrl",
+    "c",
+    "CTRL_C_EVENT",
+    "GenerateConsoleCtrlEvent",
+    "graceful",
+    "exit",
+    "shutdown",
+    "SIGINT"
+  ],
+  "os": [
+    "win32"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "lib",
+    "generate-ctrl-c-event.ps1"
+  ],
+  "main": "lib/index.js",
+  "dependencies": {},
+  "optionalDependencies": {
+    "ffi-napi": "^3.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-config-tsdx": "^0.2.0"
+  },
+  "scripts": {
+    "lint": "eslint \"**/*.{js,ts}\"",
+    "lint-fix": "npm run lint -- --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Matthew Francis Brunetti",
+    "email": "zenflow87@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenflow/generate-ctrl-c-event.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zenflow/generate-ctrl-c-event/issues"
+  },
+  "homepage": "https://github.com/zenflow/generate-ctrl-c-event#readme",
+  "prettier": {
+    "printWidth": 100,
+    "trailingComma": "all"
+  }
+}
