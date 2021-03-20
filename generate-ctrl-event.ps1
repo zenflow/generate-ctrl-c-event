@@ -13,4 +13,4 @@ public static class Kernel32
 }
 "@
 
-[Kernel32]::GenerateConsoleCtrlEvent(0, 0)
+[Kernel32]::GenerateConsoleCtrlEvent($args[0], 0)
