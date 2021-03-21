@@ -1,12 +1,8 @@
 # generate-ctrl-c-event
 
-Send CTRL_C_EVENT to all processes that share the console of the calling process
+Generate ctrl-c (or ctrl-break) events on Windows by calling [`Kernel32::GenerateConsoleCtrlEvent()`](https://docs.microsoft.com/en-us/windows/console/generateconsolectrlevent)
 
-__Only works on Windows__
-
-[![npm stats](https://nodei.co/npm/generate-ctrl-c-event.png?compact=true)](http://npmjs.com/package/generate-ctrl-c-event)
-
-<!-- [![CI status](https://img.shields.io/github/workflow/status/zenflow/generate-ctrl-c-event/CI?logo=GitHub&label=CI)](https://github.com/zenflow/generate-ctrl-c-event/actions?query=branch%3Amaster) -->
+[![npm version](https://img.shields.io/npm/v/generate-ctrl-c-event)](http://npmjs.com/package/generate-ctrl-c-event)
 [![dependencies status](https://img.shields.io/david/zenflow/generate-ctrl-c-event)](https://david-dm.org/zenflow/generate-ctrl-c-event)
 [![optional dependencies status](https://img.shields.io/david/optional/zenflow/generate-ctrl-c-event)](https://david-dm.org/zenflow/generate-ctrl-c-event?type=optional)
 [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability-percentage/zenflow/generate-ctrl-c-event?logo=Code%20Climate)](https://codeclimate.com/github/zenflow/generate-ctrl-c-event)
@@ -22,13 +18,17 @@ If you need to use this in cross-platform code,
 install it as an [optional dependency](https://docs.npmjs.com/files/package.json#optionaldependencies)
 and it will be skipped when installing your package on a non-Windows platforms.
 
-Works by calling [`Kernel32::GenerateConsoleCtrlEvent()`](https://docs.microsoft.com/en-us/windows/console/generateconsolectrlevent),
+Calls [`Kernel32::GenerateConsoleCtrlEvent()`](https://docs.microsoft.com/en-us/windows/console/generateconsolectrlevent),
 via either a Foreign Function Interface (FFI) if available,
 or a PowerShell script ([`generate-ctrl-c-event.ps1`](./generate-ctrl-c-event.ps1)) as a fallback.
 
-Exports both sync & async functions:
+Please consult the official docs on [`Kernel32::GenerateConsoleCtrlEvent()`](https://docs.microsoft.com/en-us/windows/console/generateconsolectrlevent) for semantics.
 
-```
-function generateCtrlC(): void
-function generateCtrlCAsync(): Promise<void>
+Exports:
+
+```typescript
+function generateCtrlC(): boolean
+function generateCtrlCAsync(): Promise<boolean>
+function generateCtrlBreak(dwProcessGroupId: number = 0): boolean
+function generateCtrlBreakAsync(dwProcessGroupId: number = 0): Promise<boolean>
 ```
