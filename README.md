@@ -19,8 +19,7 @@ install it as an [optional dependency](https://docs.npmjs.com/files/package.json
 and it will be skipped when installing your package on a non-Windows platforms.
 
 Calls [`Kernel32::GenerateConsoleCtrlEvent()`](https://docs.microsoft.com/en-us/windows/console/generateconsolectrlevent),
-via either a Foreign Function Interface (FFI) if available,
-or a PowerShell script ([`generate-ctrl-c-event.ps1`](./generate-ctrl-c-event.ps1)) as a fallback.
+via either a Foreign Function Interface (FFI) if available, or a PowerShell script as a fallback.
 
 Please consult the official docs on [`Kernel32::GenerateConsoleCtrlEvent()`](https://docs.microsoft.com/en-us/windows/console/generateconsolectrlevent) for semantics.
 
