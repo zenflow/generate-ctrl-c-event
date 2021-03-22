@@ -1,0 +1,16 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - run: node -e "pkg = require('./package.json'); delete pkg.os; require('fs').writeFileSync('package.json', JSON.stringify(pkg));"
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
+      - if: github.ref == 'refs/heads/master'
+        run: yarn semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
