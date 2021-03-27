@@ -2,12 +2,15 @@ name: CI
 on: [push, pull_request]
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
+      - name: Set git to use LF
+        run: |
+          git config --global core.autocrlf false
+          git config --global core.eol lf
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-      - run: node -e "pkg = require('./package.json'); delete pkg.os; require('fs').writeFileSync('package.json', JSON.stringify(pkg));"
-      - run: yarn install --frozen-lockfile
+      - run: yarn --frozen-lockfile
       - run: yarn test
       - if: github.ref == 'refs/heads/master'
         run: yarn semantic-release
