@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/zenflow/generate-ctrl-c-event/compare/v1.2.0...v1.2.1) (2021-03-27)
+
+
+### Bug Fixes
+
+* Restore package.json "os" constraint ([#7](https://github.com/zenflow/generate-ctrl-c-event/issues/7)) ([f12d959](https://github.com/zenflow/generate-ctrl-c-event/commit/f12d959cc6ef688f00cab496c62ec753b7d941e1))
+
 # [1.2.0](https://github.com/zenflow/generate-ctrl-c-event/compare/v1.1.0...v1.2.0) (2021-03-22)
 
 
