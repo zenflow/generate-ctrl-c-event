@@ -22,9 +22,6 @@
     "shutdown",
     "SIGINT"
   ],
-  "os": [
-    "win32"
-  ],
   "engines": {
     "node": ">=8"
   },
