@@ -33,7 +33,6 @@
     "generate-ctrl-c-event.ps1"
   ],
   "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
   "dependencies": {},
   "optionalDependencies": {
     "ffi-napi": "^3.0.1"
@@ -43,8 +42,7 @@
     "@semantic-release/git": "^9.0.0",
     "eslint": "^7.22.0",
     "eslint-config-zenflow": "^3.0.0",
-    "semantic-release": "^17.4.2",
-    "typescript": "^4.2.3"
+    "semantic-release": "^17.4.2"
   },
   "scripts": {
     "lint": "eslint .",
