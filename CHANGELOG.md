@@ -1,5 +1,19 @@
 # Changelog
 
+# [2.0.0](https://github.com/zenflow/generate-ctrl-c-event/compare/v1.2.1...v2.0.0) (2021-04-03)
+
+
+### Features
+
+* Remove TypeScript type definitions ([#10](https://github.com/zenflow/generate-ctrl-c-event/issues/10)) ([0b95798](https://github.com/zenflow/generate-ctrl-c-event/commit/0b957983d055aded6d145c43c041ef615217af48)), closes [#9](https://github.com/zenflow/generate-ctrl-c-event/issues/9)
+
+
+### BREAKING CHANGES
+
+* TS type definitions have been removed
+
+If you need TS types for this package, install the `@types/generate-ctrl-c-event` package.
+
 ## [1.2.1](https://github.com/zenflow/generate-ctrl-c-event/compare/v1.2.0...v1.2.1) (2021-03-27)
 
 
