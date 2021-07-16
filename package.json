@@ -30,7 +30,7 @@
   },
   "files": [
     "lib",
-    "generate-ctrl-c-event.ps1"
+    "generate-ctrl-event.ps1"
   ],
   "main": "lib/index.js",
   "dependencies": {},
