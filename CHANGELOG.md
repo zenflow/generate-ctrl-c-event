@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/zenflow/generate-ctrl-c-event/compare/v2.0.0...v2.0.1) (2021-07-16)
+
+
+### Bug Fixes
+
+* include PowerShell script in published package ([74076b1](https://github.com/zenflow/generate-ctrl-c-event/commit/74076b198859077d0a6b2afcf495f1d2bda683d0))
+
 # [2.0.0](https://github.com/zenflow/generate-ctrl-c-event/compare/v1.2.1...v2.0.0) (2021-04-03)
 
 
