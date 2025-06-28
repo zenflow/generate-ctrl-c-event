@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/zenflow/generate-ctrl-c-event/compare/v2.0.1...v2.0.2) (2025-06-28)
+
+
+### Bug Fixes
+
+* Set `-ExecutionPolicy Bypass` on PowerShell script execution ([#11](https://github.com/zenflow/generate-ctrl-c-event/issues/11)) ([12fd120](https://github.com/zenflow/generate-ctrl-c-event/commit/12fd1207d3f06db55cb350adb240a1be3e3151fb))
+
 ## [2.0.1](https://github.com/zenflow/generate-ctrl-c-event/compare/v2.0.0...v2.0.1) (2021-07-16)
 
 

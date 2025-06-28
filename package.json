@@ -1,6 +1,6 @@
 {
   "name": "generate-ctrl-c-event",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Generate ctrl-c (or ctrl-break) events on Windows by calling `Kernel32::GenerateConsoleCtrlEvent()`",
   "keywords": [
     "windows",
